@@ -29,3 +29,13 @@ El cuarto y ultimo paso es el Linking. El codigo objeto generado en la etapa de 
 2. [Steps of compiling a C program](https://medium.com/@bchen720/steps-of-compiling-a-c-program-7a9a531eb9f8)
 3. [From Source Code to Executable - Dr. Axel Kohlmeyer](https://www.ictp.it/media/539402/HPC-Appointment-6.pdf)
 4. [The Four Stages of Compiling a C Program](https://www.calleerlandsson.com/the-four-stages-of-compiling-a-c-program/)
+
+### Punto 2
+
+La salida del pre-procesador es el archivo *calculator.pp.c*. El archivo agrego toda la información de los archivos de cabeceras (headers), ademas elimino los comentarios y reemplazo los #defines.
+
+### Punto 3
+
+En el archivo *calculator.asm* en la linea 10 está en donde comienza el main y la linea 39 comienza la funcion add_numbers.
+
+### Punto 4
