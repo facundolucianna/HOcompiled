@@ -39,3 +39,17 @@ La salida del pre-procesador es el archivo *calculator.pp.c*. El archivo agrego 
 En el archivo *calculator.asm* en la linea 10 está en donde comienza el main y la linea 39 comienza la funcion add_numbers.
 
 ### Punto 4
+
+Cuando se ejecuta *nm calculator.o* se obtiene:
+
+~~~
+000000000000003e T add_numbers
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 T main
+                 U printf
+~~~
+
+La tercera columna son las entradas de las funciones. Las del codigo *calculator.c* son **add_numbers** y **main**, las otras están definidas en los headers y los va a resolver el compilador. Los descriptores que aparece son:
+
+* T - Text symbol, global. Significa que el simbolo esta presente en el texto del archivo objeto, es decir esa parte esa entada esta presente y se encuentra de forma global, o de forma externa por lo que el linkeador podria usarla para otro pedazo de codigo similar a una libreria.
+* U - Undefined symbol. Significa que no esta en el objeto, son los que el linkeador va a buscar en otras locaciones para agregarlos. Por ejemplo el caso de printf que esta definido en *stdio.h*.
