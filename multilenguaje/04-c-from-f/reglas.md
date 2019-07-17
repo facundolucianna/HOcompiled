@@ -16,7 +16,9 @@ call sum_abs(data,n,asum)
 
 Esta es la forma que debe llamarse la función en Fortran. Las variables usadas son
 
-* integer :: data(n), asum, i
+```fortran
+integer :: data(n), asum, i
+```
 
 ### Paso 2
 
